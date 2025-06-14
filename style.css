@@ -1,0 +1,277 @@
+/* Reset simples */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background-color: #fffaf5;
+  color: #333;
+  text-align: center;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #fbe3d3;
+  border-bottom: 3px solid #f6c59b;
+}
+
+header img {
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  font-size: 2rem;
+  color: #c2572d;
+  margin-top: 1rem;
+}
+
+header p {
+  font-style: italic;
+  color: #666;
+}
+
+/* Navegação */
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  background-color: #fff0e5;
+  padding: 1rem;
+  border-bottom: 1px solid #f6c59b;
+}
+
+nav a {
+  text-decoration: none;
+  color: #c2572d;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ff914d;
+}
+
+/* Banner */
+.banner {
+  background-image: url('assets/banner1.png');
+  background-size: cover;
+  background-position: center;
+  padding: 6rem 1rem;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.banner::after {
+  content: "";
+  background-color: rgba(0,0,0,0.5);
+  position: absolute;
+  inset: 0;
+}
+
+.banner-content {
+  position: relative;
+  z-index: 1;
+}
+
+.banner h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.banner p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.button {
+  background-color: #ff914d;
+  padding: 0.8rem 1.6rem;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.button:hover {
+  background-color: #e6732f;
+}
+
+/* Seções */
+section {
+  padding: 3rem 1rem;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+h2 {
+  color: #c2572d;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+h2::before {
+  content: "🐾";
+  position: static;
+}
+
+/* Serviços */
+#servicos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#servicos ul {
+  list-style: none;
+  padding-left: 0;
+  max-width: 600px;
+  text-align: left;
+  margin-top: 2rem;
+}
+
+#servicos li {
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  border-left: 4px solid #ff914d;
+}
+
+.servicos-img {
+  display: block;
+  margin: 0 auto 2rem auto;
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 10px;
+}
+
+/* Centraliza todos os parágrafos */
+p {
+  text-align: center;
+}
+
+/* Galeria */
+.galeria-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.galeria-grid img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.galeria-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* Depoimentos */
+#depoimentos {
+  background-color: #fff0e5;
+  border-top: 2px solid #f6c59b;
+  border-bottom: 2px solid #f6c59b;
+}
+
+.depoimento {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.05);
+  margin-bottom: 1.5rem;
+}
+
+/* Formulário */
+form {
+  display: grid;
+  gap: 1rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+form input,
+form select,
+form textarea {
+  padding: 0.75rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+form input[type="submit"] {
+  background-color: #c2572d;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+  background-color: #a64522;
+}
+
+/* Rodapé */
+footer {
+  background-color: #fbe3d3;
+  color: #444;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+footer a {
+  color: #c2572d;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+footer img {
+  vertical-align: middle;
+  margin: 0 5px;
+}
+
+.whatsapp-button {
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: #25d366;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.whatsapp-button:hover {
+  background-color: #1da851;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .banner h1 {
+    font-size: 2rem;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+}
